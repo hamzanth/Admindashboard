@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/font-awesome-4.7.0/css/font-awesome.min.css">
+    <style media="screen">
+      *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      a{
+        text-decoration: none;
+        color: black;
+      }
+      ul{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+      }
+      div.grid-container{
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: 20px 20px;
+        /* border: 1px solid grey; */
+      }
+      div.grid-container div{
+         /* border: 1px solid blue; */
+      }
+      div.leftside{
+        background-color: cornflowerblue;
+        height: 138vh;
+        /* position: relative; */
+        /* height: 100%; */
+        padding: 24px;
+      }
+      div.left-head{
+        display: flex;
+        margin-bottom: 30px
+      }
+      div.leftside ul li a{
+        padding: 10px 5px;
+        /* border: 1px solid red; */
+      }
+      div.leftside ul li a:hover{
+        background-color: rgba(0, 0, 0, 0.5);
+        /* border: 1px solid red; */
+      }
+      div.leftside ul li a p{
+        color: white;
+      }
+      div.leftside ul li a span{
+        margin-right: 20px;
+        display: inline-block;
+      }
+      div.leftside i{
+        color: white;
+      }
+      div.leftside ul.fnav-list{
+        margin-bottom: 20px;
+      }
+      div.right-side div.righthead{
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        margin-bottom: 28px;
+      }
+      div.righthead input{
+        width: 80%;
+        padding: 5px;
+        border: none;
+        border-radius: 5px;
+        background-color: lightgrey;
+      }
+      div.right-side div.top-right{
+        display: grid;
+        grid-template-columns: auto auto auto;
+      }
+      div.rtshead{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      div.lgs{
+        display: grid;
+        grid-template-columns: auto auto 3fr;
+        align-items: center;
+        /* border: 1px solid green; */
+      }
+      div.lgs div{
+        /* border: 1px solid green; */
+        margin-left: 20px;
+      }
+      div.rgs{
+        /* border: 1px solid green; */
+        border-radius: 4px;
+      }
+      div.rgs button{
+        border: none;
+        color: white;
+        font-size: 16px;
+        background-color: cornflowerblue;
+        padding: 6px 20px;
+        border-radius: 8px;
+        margin-right: 30px;
+      }
+      div.uppersection{
+        box-shadow: 0px 2px 1px rgba(0,0,0,0.4);
+        padding: 28px;
+      }
+      div.rightbody{
+        background-color: lightgrey;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 25px;
+        padding: 25px;
+      }
+      div.rightbody div.gridcont{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(6, 220px);
+        /* grid-auto-rows: minmax(200px, 250px); */
+        grid-auto-rows: 200px;
+        gap: 25px;
+        padding: 25px;
+      }
+      div.rightbody > div{
+        /* border: 1px solid green; */
+      }
+      div.card{
+        background-color: white;
+        padding: 20px;
+        border-left: 10px solid gold;
+        box-shadow: 0px 2px 1px rgba(0,0,0,0.4);
+        border-radius: 5px;
+        position: relative;
+        /* height: 225px; */
+        /* max-width: 40px; */
+        /* text-align: left; */
+      }
+      div.card p{
+        font-size: 17px;
+      }
+      div.icons{
+        position: absolute;
+        text-align: right;
+        margin-top: 30px;
+        bottom: 20px;
+        right: 15px;
+      }
+      div.icons i{
+        margin-right: 15px;
+      }
+      div.rightsect div{
+        background-color: white;
+        border-radius: 5px;
+      }
+      div.rightsect h3{
+        margin-bottom: 25px;
+      }
+      div.innsect, div.innsect2 {
+        box-shadow: 0px 2px 1px rgba(0,0,0,0.4);
+      }
+      div.innsect hr{
+        margin: 20px 0;
+      }
+      div.innsect2 div.tr1{
+        display: grid;
+        grid-template-columns: 1fr 6fr;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+      div.tr1 p{
+        margin: 4px 0;
+      }
+
+      @media screen and (max-width: 700px){
+        div.right-side div.rightbody{
+          grid-template-columns: 1fr 1fr;
+          border: 1px solid red;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="grid-container">
+      <div class="leftside">
+        <div class="left-head" style="display:flex; align-items: center;">
+          <span style="display:inline-block; margin-right: 20px;"><i class="fa fa-square"></i></span>
+          <p style="font-size: 20px; color: white;">Dashboard</p>
+        </div>
+        <ul class="fnav-list">
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-home"></i></span>
+              <p>Home</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-user"></i></span>
+              <p>Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-comment"></i></span>
+              <p>Message</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-history"></i></span>
+              <p>History</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-tasks"></i></span>
+              <p>Tasks</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-users"></i></span>
+              <p>Community</p>
+            </a>
+          </li>
+        </ul>
+        <ul class="snav-list">
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-gear"></i></span>
+              <p>Settings</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-support"></i></span>
+              <p>Support</p>
+            </a>
+          </li>
+          <li>
+            <a href="#" style="display: flex">
+              <span><i class="fa fa-lock"></i></span>
+              <p>Privacy</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+
+      <div class="right-side">
+        <div class="uppersection">
+          <div class="righthead">
+            <div class="top-left">
+              <span><i class="fa fa-search"></i></span>
+              <input type="text" name="search">
+            </div>
+              <div class="top-right">
+                <span><i class="fa fa-bell"></i></span>
+                <p>Morgan Oakley</p>
+              </div>
+          </div>
+
+          <div class="rtshead">
+            <div class="lgs">
+              <i class="fa fa-bell" style="font-size: 35px;"></i>
+              <div class="whatever">
+                <p>Hi there,</p>
+                <p>Morgan Oakley (@morgan)</p>
+              </div>
+            </div>
+
+            <div class="noth"></div>
+
+            <div class="rgs">
+              <button type="button" name="button">New</button>
+              <button type="button" name="button">Upload</button>
+              <button type="button" name="button">Share</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="rightbody">
+          <div class="leftsect">
+            <h3>Project</h3>
+            <div class="gridcont">
+              <div class="card">
+                <h3>Super Cool Project</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <div class="icons">
+                  <i class="fa fa-gear"></i>
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-ban"></i>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Super Cool Project</h3>
+                <p>aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <div class="icons">
+                  <i class="fa fa-gear"></i>
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-ban"></i>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Super Cool Project</h3>
+                <p>Lorem ipt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <div class="icons">
+                  <i class="fa fa-gear"></i>
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-ban"></i>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Super Cool Project</h3>
+                <p>incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <div class="icons">
+                  <i class="fa fa-gear"></i>
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-ban"></i>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Super Cool Project</h3>
+                <p>L labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <div class="icons">
+                  <i class="fa fa-gear"></i>
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-ban"></i>
+                </div>
+              </div>
+              <div class="card">
+                <h3>Super Cool Project</h3>
+                <p>Se veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit</p>
+                <div class="icons">
+                  <i class="fa fa-gear"></i>
+                  <i class="fa fa-tasks"></i>
+                  <i class="fa fa-ban"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="rightsect">
+            <h3>Announcements</h2>
+
+              <div class="innsect" style="padding: 25px;">
+                <div class="maintenance">
+                  <h3>Site Maintenance</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  </p>
+                </div>
+                <hr>
+                <div class="community">
+                  <h3>Community Share Day</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+                  </p>
+                </div>
+                <hr>
+                <div class="privacy">
+                  <h3>Updated Privacy Policy</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                    magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
+                  </p>
+                </div>
+              </div>
+
+              <h3 style="margin-bottom: 5px; margin-top: 20px">Trending</h3>
+
+                <div class="innsect2" style="padding: 25px;">
+                  <div class="tr1">
+                    <span><i class="fa fa-gear"></i></span>
+                    <div>
+                      <p>@tegan</p>
+                      <p>World Peace Builder</p>
+                    </div>
+                  </div>
+
+                  <div class="tr1">
+                    <span><i class="fa fa-gear"></i></span>
+                    <div>
+                      <p>@tegan</p>
+                      <p>World Peace Builder</p>
+                    </div>
+                  </div>
+
+                  <div class="tr1">
+                    <span><i class="fa fa-gear"></i></span>
+                    <div>
+                      <p>@tegan</p>
+                      <p>World Peace Builder</p>
+                    </div>
+                  </div>
+                </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
