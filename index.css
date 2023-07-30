@@ -112,7 +112,7 @@ div.rightbody div.gridcont{
   display: grid;
   overflow: auto;
   grid-template-columns: repeat(2, minmax(300px, 50%));
-  grid-template-rows: repeat(3, 250px));
+  grid-template-rows: repeat(3, 250px);
   /* grid-auto-rows: 250px; */
   gap: 25px;
   padding: 25px;
